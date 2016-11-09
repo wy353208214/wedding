@@ -50,7 +50,7 @@
 							<span class="icon-bar"></span>
 						  </button>
 						  <div class="navbar-brand logo">
-								<h1><a href="index.html">阮露&王洋</a></h1>
+								<h1><a href="index.html"><span style="font-style: italic; font-family: "华文楷体", STKaiti, monospace">阮露&&王洋</span></a></h1>
 							</div>
 						</div>
 						<!-- Collect the nav links, forms, and other content for toggling -->
@@ -101,9 +101,31 @@
 			<!--why-->
 				<div class="why">
 					<div class="container">
-						<h3 class="tittle">执子之手</h3>
-						<div class="why-img">
-						<img src="images/a.jpg" class="img-responsive" alt=""/>
+						<h3 class="tittle">婚礼现场直播</h3>
+						<div class="why-img">					
+							<!-- 未开始的缩略图 -->
+							<img id="thumb_img" src="images/a.jpg" class="img-responsive" alt=""/>
+							<!-- player -->
+							<div id="player" style="width:80%;height:450px; margin: auto;">
+	   							 <script type="text/javascript" charset="utf-8" src="http://yuntv.letv.com/player/live/blive.js"></script>
+	   							 <script>
+	        						var player = new CloudLivePlayer();
+	        						var playerConf = {"activityId":"A20161109000023i"};
+	        						player.init(playerConf);
+	    						</script>
+							</div>
+							<!-- 通过时间判断删除不同的元素-->
+							<script type="text/javascript" charset="utf-8">
+								var startTime = '2017-1-20 12:00:00:000';
+								var date = new Date(startTime);
+								var date = new Date(startTime.replace(/-/g, '/'));
+								var timeleft = date.getTime() - new Date().getTime();
+								if (timeleft < 0) {
+									$("#player").remove();	
+								} else {									
+									$("#thumb_img").remove();
+								}
+							</script>
 						</div>
 						<div class="Why-grids">
 							<div class="col-md-4 why-grid">
