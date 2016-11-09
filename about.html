@@ -34,6 +34,12 @@
 		});
 	</script>
 <!--endsmothscrolling-->
+<style type="text/css">
+	#player{width:80%;margin: auto;}
+	@media screen and (max-width: 414px){
+		#player{width: 90%;}
+	}
+</style>
 </head>
 <body>
 	<div class="header" id="head">
@@ -106,11 +112,15 @@
 							<!-- 未开始的缩略图 -->
 							<img id="thumb_img" src="images/a.jpg" class="img-responsive" alt=""/>
 							<!-- player -->
-							<div id="player" style="width:80%;height:450px; margin: auto;">
+							<div id="player" >
 	   							 <script type="text/javascript" charset="utf-8" src="http://yuntv.letv.com/player/live/blive.js"></script>
 	   							 <script>
+	   							 	var playerContainerElement = $('#player');
+	   							 	var width = playerContainerElement.width();
+									playerContainerElement.height(width * 9 / 16);
+									// console.log(width);
 	        						var player = new CloudLivePlayer();
-	        						var playerConf = {"activityId":"A20161109000023i"};
+	        						var playerConf = {"activityId":"A20161109000023i", "auto_play": 0, "rate": "yuanhua"};
 	        						player.init(playerConf);
 	    						</script>
 							</div>
