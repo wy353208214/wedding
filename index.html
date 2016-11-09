@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>主页</title>
+<!--css-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--css-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--timer-->
+<link rel="stylesheet" href="css/jquery.countdown.css" />
+<!--timer-->
+<!--js-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/numscroller-1.0.js"></script>
+<!--js-->
+<!--webfonts-->
+<link href='http://fonts.useso.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--webfonts-->
+<script src="js/responsiveslides.min.js"></script>
+ <script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
+ <!--startsmothscrolling-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!--endsmothscrolling-->
+
+</head>
+<body>
+	<div class="header" id="head">
+		<div class="container">
+			<div class="header-menu">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						  <div class="navbar-brand logo">
+								<h1><a href="index.html">阮露&王洋</a></h1>
+							</div>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="index.html" data-hover="Home">首页</a></li>
+								<li><a data-hover="About" href="about.html">我们</a></li>
+								<li><a data-hover="Photos" href="photos.html">相册</a></li>
+								<li><a data-hover="Contact" href="contact.html">赴宴</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			<div class="clearfix"></div>
+			</div>	
+		</div> 
+	</div>
+		<!--header-->		
+	<div class="banner-section">
+		<div class="slider">
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider">
+					<li>
+					  <img src="images/ba1.jpg" alt="">
+					  <div class="caption">
+							<div class="cap">
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+							</div>
+								<h3 style="color: #EB0808">我们结婚了</h3>
+								<p style="color: #EB0808">2017<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>01<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>20</p>
+							<div class="cap">
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" style="color: #F00C0C" aria-hidden="true"></i>
+							</div>
+					  </div>
+					</li>
+					<li>
+					  <img src="images/ba2.jpg" alt="">
+						<div class="caption">
+							<div class="cap">
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+							</div>
+								<h3>我们结婚了</h3>
+								<p>2017<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>01<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>20</p>
+							<div class="cap">
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+							</div>
+					  </div>
+					</li>
+					<li>
+					  <img src="images/ba3.jpg" alt="">
+						<div class="caption">
+							<div class="cap">
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+							</div>
+								<h3>我们结婚了</h3>
+								<p>2017<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>01<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>20</p>
+							<div class="cap">
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+							</div>
+					  </div>
+					</li>
+				</ul>
+		  </div>
+	  </div>
+	</div>
+		<div class="content">
+			<!--welcome-->
+			<div class="couple" id="couple">
+				<div class="container">
+					<h2 class="tittle"> 我们的爱情</h2>
+					<div class="couple-grids">
+						<div class="col-md-6 couple-grid">
+							<div class="couple-top">
+								<div class="couple-img  multi-gd-text">
+									<a href="photos.html"><img src="images/w1.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="couple-text hvr-wobble-bottom">
+									<h6>新郎</h6>
+									<h4>王洋</h4>
+									<p>相恋相惜，是今生的缘分，前世的造化。结发为夫妻，恩爱两不疑。我会好好呵护这份千世修来的情缘，生活总是厚待懂得珍惜它的人。待到10年后，再回首，可能又是一个感人的十年点滴~</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 couple-grid">
+							<div class="couple-top">
+								<div class="couple-img multi-gd-text">
+									<a href="photos.html"><img src="images/w2.jpg" class="img-responsive" alt=""></a>
+								</div>
+								<div class="couple-text hvr-wobble-bottom">
+									<h6>新娘</h6>
+									<h4>阮露</h4>
+									<p>愿我们的爱情生活，如同无花果树的果子渐渐成熟;又如葡萄树开花放香，作基督馨香的见证，与诸天穹苍一同地每日每夜述说着神的作为与荣耀!</p>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="countdown">
+						<div id="counter"> </div>
+						<script src="js/jquery.countdown.js"></script>
+						<script src="js/script.js"></script>
+					</div>
+				</div>
+			</div>
+			<div class="lovers">
+				<div class="container">
+					<h3 class="tittle1">Timeline of love</h3>
+					<div class="work-info"> 
+						<div class="col-md-6 work-left"> 
+							<h4>2012, 8, 05 </h4>
+						</div>
+						<div class="col-md-6 work-right"> 
+							<div class="love-text">
+							<h5><span class="glyphicon glyphicon-heart"> </span>第一次相遇</h5>
+							<p>那一天我们相识，交换了电话号码和QQ，每天有说不完的话，堡不完的电话粥，慢慢的我们产生了依赖</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="work-info"> 
+						<div class="col-md-6 work-right work-right2"> 
+							<h4>2012, 10, 21</h4>
+						</div>
+						<div class="col-md-6 work-left work-left2"> 
+							<div class="love-text">
+								<h5> 我们成为男女朋友<span class="glyphicon glyphicon-heart"></span></h5>
+								<p>那天我向你表白了，你没说话，我怕气氛尴尬，迅速接过话，“我就当你默认了”，你依然没说话，只是笑笑，就这样一不小心我们成为了男女朋友</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="work-info"> 
+						<div class="col-md-6 work-left"> 
+							<h4>2016, 9, 26</h4>
+						</div>
+						<div class="col-md-6 work-right"> 
+							<div class="love-text">
+								<h5><span class="glyphicon glyphicon-heart"> </span> 求婚</h5>
+								<p>那天在家，没有其他朋友，只有你我，烛光晚餐，我向你求婚了，你不假思索的答应了，我为你戴上了戒指，而你轻轻的吻了我的额头，从那天起我们真的要结婚了</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="work-info"> 
+						<div class="col-md-6 work-right work-right2"> 
+							<h4>2016, 1, 25</h4>
+						</div>
+						<div class="col-md-6 work-left work-left2"> 
+							<div class="love-text">
+								<h5>领取结婚证<span class="glyphicon glyphicon-heart"></span></h5>
+								<p>那天你说日子不好，我依然倔强的拉着你领了结婚证，一路走来曲曲折折，我们终于结婚了，成为了合法夫妻，彼此发誓白头偕老，相濡以沫</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+	<!--lover-->
+			<div class="count-down">
+				<div class="container">
+					<div class="count-grids">
+						<div class="col-md-3 count-grid">
+							<div class="count hvr-bounce-to-bottom">
+								<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='250' data-delay='.5' data-increment="100">250</div>
+									<h5>来宾</h5>
+							</div>
+						</div>
+						<div class="col-md-3 count-grid">
+							<div class="count hvr-bounce-to-bottom">
+								<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='500' data-delay='.5' data-increment="100">500</div>
+									<h5>邀请客人</h5>
+							</div>
+						</div>
+						<div class="col-md-3 count-grid">
+							<div class="count hvr-bounce-to-bottom">
+								<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='200' data-delay='.5' data-increment="100">200</div>
+									<h5>女方客人</h5>
+								</div>
+						</div>
+						<div class="col-md-3 count-grid">
+							<div class="count hvr-bounce-to-bottom">
+								<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='250' data-delay='.5' data-increment="100">250</div>
+									<h5>南方客人</h5>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+				<div class="attending" id="rsvp">
+					<div class="container">
+						<h3 class="tittle">诚邀您赴宴</h3>
+						<div class="attened">
+							<form action="#" method="post">
+								<span>姓名</span>
+									<input type="text" Name="name" placeholder="" required>
+								<span>电话</span>
+									<input type="text" Name="name" placeholder="" required>
+								<span>备注</span>
+									<input type="text" Name="name" placeholder="" required>
+									<input type="submit" value="参加">
+							</form>
+						</div>
+					</div>	
+				</div>
+				<div class="details">
+					<div class="container">
+						<div class="details-grids">
+							<div class="col-md-4 details-grid" style="margin: auto; width: 100%">
+								<div class="icon">
+									<a href="contact.html"><i class="glyphicon glyphicon-map-marker effect-1" aria-hidden="true"></i></a>
+								</div>
+								<h4>婚礼举行地址</h4>
+								<p>湖北省襄阳老河口市北京路奥华酒店2楼会客厅</p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<!--footer-->
+			<div class="footer-section">
+				<div class="container">
+					<a href="#head" class="scroll top"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
+				</div>
+			</div>
+			
+	<!--footer-->
+</body>
+</html>
