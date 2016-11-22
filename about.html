@@ -40,8 +40,21 @@
 		#player{width: 90%;}
 	}
 </style>
+
+<!-- 站长统计 -->
+<script>
+//声明_czc对象:
+var _czc = _czc || [];
+//绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+_czc.push(["_setAccount", "1260852786"]);
+</script>
+<!-- 站长统计 -->
+
 </head>
 <body>
+	<!-- 站长统计 -->
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260852786'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260852786%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+	</script>
 	<div class="header" id="head">
 		<div class="container">
 			<div class="header-menu">
@@ -65,7 +78,7 @@
 								<li><a href="index.html" data-hover="Home">首页</a></li>
 								<li class="active"><a data-hover="About" href="about.html">我们</a></li>
 								<li><a data-hover="Photos" href="photos.html">相册</a></li>
-								<li><a data-hover="Contact" href="contact.html">赴宴</a></li>
+								<li><a data-hover="Contact" href="contact.html">举办地</a></li>
 							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
@@ -76,16 +89,91 @@
 	</div>
 		<!--header-->		
 		<div class="content">
-			<!--about-->
-				<div class="about">
+		<!--why-->
+				<div class="why">
 					<div class="container">
-						<h2 class="tittle">我们</h2>
+						<h3 class="tittle">婚礼直播倒计时</h3>
+						<div class="why-img">
+							<div id="countdown_container">
+								<!-- 未开始的缩略图 -->
+								<img id="thumb_img" src="images/g5.jpg" class="img-responsive"/>
+								<!-- 倒计时 -->
+								<div class="countdown" id = "counterId" style="position: absolute; left: 0; right:0; background: transparent; border-color: transparent;">
+									<div id="counter"></div>
+									<script src="js/jquery.countdown.js"></script>
+									<script src="js/script.js"></script>
+								</div>		
+							</div>
+			
+							<!-- player -->
+							<div id="player" >
+	   							 <script type="text/javascript" charset="utf-8" src="http://yuntv.letv.com/player/live/blive.js"></script>
+	   							 <script>
+	   							 	var playerContainerElement = $('#player');
+	   							 	var width = playerContainerElement.width();
+									playerContainerElement.height(width * 9 / 16); 
+									// console.log(width);
+	        						var player = new CloudLivePlayer();
+	        						var playerConf = {"activityId":"A20161109000023i", "auto_play": 0, "rate": "yuanhua"};
+	        						player.init(playerConf);
+	    						</script>
+							</div>
+							<!-- 通过时间判断删除不同的元素-->
+							<script type="text/javascript" charset="utf-8">
+								var imgEle = $('#thumb_img');
+								var counterEle = $('#counterId');
+								var height = imgEle.height();
+								counterEle.css("margin-top", - (height+counterEle.height())/2);
+
+
+								var startTime = '2017-1-23 12:00:00:000';
+								var date = new Date(startTime);
+								var date = new Date(startTime.replace(/-/g, '/'));
+								var timeleft = date.getTime() - new Date().getTime();
+								if (timeleft > 0) {
+									$("#player").remove();	
+								} else {									
+									$("#countdown_container").remove();
+								}
+							</script>
+						</div>
+						<div class="Why-grids">
+							<div class="col-md-4 why-grid">
+								<h4>相识</h4>
+								<p>回忆初次相遇，拥有太多乐趣。你嘴角露出的尴尬笑意，我表现的言行的霸气，我都不曾舍得忘记。我不愿放弃，不愿抛弃，因为这是我们搞笑的相遇，和美好的结局！也许是这样吧！因为我们的相遇相识相知不平凡。</p>
+								<div class="why-img1">
+									<img src="images/g1.jpg" class="img-responsive" alt=""/>
+								</div>
+							</div>
+							<div class="col-md-4 why-grid">
+							<h4>曾经</h4>
+								<p>4年光阴，一路走来，历经坎坷，我们吵过，闹过，终究敌不过爱情的力量，我愿用一生去保护你，直到地老天荒，岁月流光。</p>
+								<div class="why-img1">
+									<img src="images/g2.jpg" class="img-responsive" alt=""/>
+								</div>
+							</div>
+							<div class="col-md-4 why-grid">
+							<h4>现在</h4>
+								<p>亲爱的，时光在流，我们在走，愿我们走到时光尽头。我相信时间和距离都不会把我们分开，因为我们还有未来</p>
+								<div class="why-img1">
+									<img src="images/g3.jpg" class="img-responsive" alt=""/>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			<!--why-->
+			<!--about-->
+<!-- 				<div class="about">
+					<div class="container">
+						<h2 class="tittle">关于我们</h2>
 						<div class="about-grids">
 							<div class="col-md-3 about-grid">
 								<img src="images/p1.jpg" class="img-responsive" alt="/">
 							</div>
 							<div class="col-md-9 about-grid1">
-								<h4>Mes cuml dia sed inenias ingerto lot aliiqtes</h4>
+								<h4>结婚了~</h4>
 								<p>Nemo enim ips voluptatem voluptas sitsper natuaut odit aut fugit consequuntur magni dolores eosqratio nevoluptatem nesciunt lacusueni ascet dolingerto aliiqt sit amet eism com odictor ut ligulate cot ameti dapibu. Nemo enim ipsam voluptatem voluptas sit. Aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui rationevoluptatem nesciunt. Neque poMes cuml dia sed in lacusut eniascet ingerto aliiqt es site amet .</p>
 								<div class="about-bottom">
 									<div class="col-md-6 about-bottomgrid">
@@ -102,136 +190,8 @@
 								<div class="clearfix"></div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			<!--about-->
-			<!--why-->
-				<div class="why">
-					<div class="container">
-						<h3 class="tittle">婚礼现场直播</h3>
-						<div class="why-img">					
-							<!-- 未开始的缩略图 -->
-							<img id="thumb_img" src="images/a.jpg" class="img-responsive" alt=""/>
-							<!-- player -->
-							<div id="player" >
-	   							 <script type="text/javascript" charset="utf-8" src="http://yuntv.letv.com/player/live/blive.js"></script>
-	   							 <script>
-	   							 	var playerContainerElement = $('#player');
-	   							 	var width = playerContainerElement.width();
-									playerContainerElement.height(width * 9 / 16);
-									// console.log(width);
-	        						var player = new CloudLivePlayer();
-	        						var playerConf = {"activityId":"A20161109000023i", "auto_play": 0, "rate": "yuanhua"};
-	        						player.init(playerConf);
-	    						</script>
-							</div>
-							<!-- 通过时间判断删除不同的元素-->
-							<script type="text/javascript" charset="utf-8">
-								var startTime = '2017-1-20 12:00:00:000';
-								var date = new Date(startTime);
-								var date = new Date(startTime.replace(/-/g, '/'));
-								var timeleft = date.getTime() - new Date().getTime();
-								if (timeleft < 0) {
-									$("#player").remove();	
-								} else {									
-									$("#thumb_img").remove();
-								}
-							</script>
-						</div>
-						<div class="Why-grids">
-							<div class="col-md-4 why-grid">
-								<h4>相识</h4>
-								<p>Vivamus sollicitudin massa non libero egestas, eget blandit sem condimentum. Nulla scelerisque massa nec tellus condimentum sodales.</p>
-								<div class="why-img1">
-									<img src="images/g1.jpg" class="img-responsive" alt=""/>
-								</div>
-							</div>
-							<div class="col-md-4 why-grid">
-							<h4>曾经</h4>
-								<p>Vivamus sollicitudin massa non libero egestas, eget blandit sem condimentum. Nulla scelerisque massa nec tellus condimentum sodales.</p>
-								<div class="why-img1">
-									<img src="images/g2.jpg" class="img-responsive" alt=""/>
-								</div>
-							</div>
-							<div class="col-md-4 why-grid">
-							<h4>现在</h4>
-								<p>Vivamus sollicitudin massa non libero egestas, eget blandit sem condimentum. Nulla scelerisque massa nec tellus condimentum sodales.</p>
-								<div class="why-img1">
-									<img src="images/g3.jpg" class="img-responsive" alt=""/>
-								</div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</div>
-			<!--why-->
-			<!--team-->
-			<div class="team-section">
-				<div class="container">
-					<h3 class="tittle">Wedding Planners</h3>
-					<div class="team-grids">
-						<div class="col-md-4 team-grid">
-							<div class="ih-item circle effect1"><a href="#">
-								<div class="spinner"></div>
-								<div class="img"><img src="images/t1.jpg" alt="img"></div>
-								<div class="info">
-								  <div class="info-back">
-									<h4>Victoria</h4>
-									<span>Description goes here</span>
-								  </div>
-								</div></a>
-							</div>
-							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-							<div class="social-icons">
-								<a href="#"><i class="icons"></i></a>
-								<a href="#"><i class="icons1"></i></a>
-								<a href="#"><i class="icons2"></i></a>
-								<a href="#"><i class="icons3"></i></a>
-							</div>
-						</div>
-						<div class="col-md-4 team-grid">
-							<div class="ih-item circle effect1"><a href="#">
-								<div class="spinner"></div>
-									<div class="img"><img src="images/t2.jpg" alt="img"></div>
-								<div class="info">
-									<div class="info-back">
-										<h4>Jhone Doe</h4>
-										<span>Description goes here</span>
-								  </div>
-								</div></a>
-							</div>
-							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-							<div class="social-icons">
-								<a href="#"><i class="icons"></i></a>
-								<a href="#"><i class="icons1"></i></a>
-								<a href="#"><i class="icons2"></i></a>
-								<a href="#"><i class="icons3"></i></a>
-							</div>
-						</div>
-						<div class="col-md-4 team-grid">
-							<div class="ih-item circle effect1"><a href="#">
-								<div class="spinner"></div>
-									<div class="img"><img src="images/t3.jpg" alt="img"></div>
-								<div class="info">
-									<div class="info-back">
-										<h4>Kathy Doe</h4>
-										<span>Description goes here</span>
-								  </div>
-								</div></a>
-							</div>
-							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-							<div class="social-icons">
-								<a href="#"><i class="icons"></i></a>
-								<a href="#"><i class="icons1"></i></a>
-								<a href="#"><i class="icons2"></i></a>
-								<a href="#"><i class="icons3"></i></a>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
-			<!--team-->
-
 		</div>
 		<!--footer-->
 			<div class="footer-section">

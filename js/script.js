@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 	/* ---- Countdown timer ---- */
-	var startTime = '2017-1-20 12:00:00:000';
+	var startTime = '2017-1-23 12:00:00:000';
 	var date = new Date(startTime); //传入一个时间格式，如果不传入就是获取现在的时间了，这样做不兼容火狐。
 	var date = new Date(startTime.replace(/-/g, '/'));
 	var timeleft = date.getTime() - new Date().getTime();
